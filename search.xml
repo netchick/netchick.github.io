@@ -56,7 +56,7 @@
 <p>例如：<code>ssh-keygen -t rsa -C &quot;XXX@sina.com&quot;</code>：</p>
 </blockquote>
 </li>
-<li><p>生成 ssh 密钥<br>此时，生成密钥后，在你电脑目录：C:\Users\用户名XXX\.ssh 下，会生成两个文件：</p>
+<li><p>生成 ssh 密钥<br>此时，生成密钥后，在你电脑目录：<code>C:\Users\用户名XXX\.ssh</code> 下，会生成两个文件：</p>
 <blockquote>
 <ul>
 <li>私钥：id_rsa</li>
