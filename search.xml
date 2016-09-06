@@ -51,9 +51,9 @@
 </ul>
 <blockquote>
 <ul>
-<li><p>在 Git Bash 中，输入：ssh-keygen -t rsa -C “邮箱地址”，然后回车，回车，再回车，一共 3 次回车。</p>
+<li><p>在 Git Bash 中，输入：<code>ssh-keygen -t rsa -C &quot;邮箱地址&quot;</code>，然后回车，回车，再回车，一共 3 次回车。</p>
 <blockquote>
-<p>例如：ssh-keygen -t rsa -C “XXX@sina.com”：</p>
+<p>例如：<code>ssh-keygen -t rsa -C &quot;XXX@sina.com&quot;</code>：</p>
 </blockquote>
 </li>
 <li><p>生成 ssh 密钥<br>此时，生成密钥后，在你电脑目录：C:\Users\用户名XXX.ssh 下，会生成两个文件：</p>
@@ -70,14 +70,17 @@
 <li>现在用记事本打开 id_rsa.pub，复制文件中的所有内容。<br>访问：<a href="https://github.com/XXX/XXX.github.io/settings/keys" target="_blank" rel="external">https://github.com/XXX/XXX.github.io/settings/keys</a>, 添加新秘钥,<br>Title：随便取<br>Key：把刚刚复制的都粘贴进来(删除尾部多余的空行)</li>
 </ul>
 <h2 id="同步本地的博客内容到Github"><a href="#同步本地的博客内容到Github" class="headerlink" title="同步本地的博客内容到Github"></a>同步本地的博客内容到Github</h2><ul>
-<li>要把本地的静态博客同步到 Github，我们还需要先安装两个跟部署相关的 hexo 插件：<br>继续在 Git Bash 中输入：<br>cnpm install hexo -server –save<br>cnpm install hexo-deployer-git –save</li>
-<li>编辑全局 hexo 的配置文件：_config.yml<br>官网对此配置的介绍：<a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="external">https://hexo.io/zh-cn/docs/configuration.html</a><br>配置大致如下(XXX为你的Github账号)：</li>
+<li><p>要把本地的静态博客同步到 Github，我们还需要先安装两个跟部署相关的 hexo 插件：<br>继续在 Git Bash 中输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install hexo-server --save</div><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
+</li>
+<li><p>编辑全局 hexo 的配置文件：_config.yml<br>官网对此配置的介绍：<a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="external">https://hexo.io/zh-cn/docs/configuration.html</a><br>配置大致如下(XXX为你的Github账号)：</p>
+</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: https://github.com/XXX/XXX.github.io.git</div><div class="line">  branch: master</div><div class="line">...</div></pre></td></tr></table></figure>
 <ul>
 <li><p>编辑全局配置后我们需要重新部署：<br>继续在 Git Bash 中输入命令：<br>先清除掉已经生成的旧文件：<code>hexo clean</code><br>再生成一次静态文件：<code>hexo generate</code><br>在本地预览下：<code>hexo server</code><br>本地没问题之后，Ctrl + C 停掉本地预览，使用部署命令部署到 Github 上：<code>hexo deploy</code>，有弹出提示框时，输入：<code>yes</code>后等待部署完成</p>
 </li>
-<li><p>之后就可以访问服务器地址：<a href="https://XXX.github.io，查看成果了" target="_blank" rel="external">https://XXX.github.io，查看成果了</a></p>
+<li><p>之后就可以访问服务器地址：<a href="https://XXX.github.io" target="_blank" rel="external">https://XXX.github.io</a> 查看成果了</p>
 </li>
 </ul>
 <p><strong>通过上面几次流程我们也就可以总结：以后，每次发表新文章要部署都按这样的流程来：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo generate</div><div class="line">hexo deploy</div></pre></td></tr></table></figure></p>
