@@ -209,7 +209,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/">Github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/">Node.js</a></li></ul>
                     </div>
                 </section>
                 
@@ -299,6 +299,163 @@
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-Hexo-Github搭建博客" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/09/06/Hexo-Github搭建博客/" class="article-date">
+      <time datetime="2016-09-06T05:15:41.000Z" itemprop="datePublished">2016-09-06</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/06/Hexo-Github搭建博客/">Hexo+Github搭建博客</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="本文环境"><a href="#本文环境" class="headerlink" title="本文环境"></a>本文环境</h2><ul>
+<li>系统： Win10 X64</li>
+<li>git: 2.10.0</li>
+<li>node.js： v6.4.0</li>
+</ul>
+<h2 id="软件官网"><a href="#软件官网" class="headerlink" title="软件官网"></a>软件官网</h2><ul>
+<li>git：<a href="http://git-scm.com/" target="_blank" rel="external">http://git-scm.com/</a></li>
+<li>node.js：<a href="http://nodejs.org/" target="_blank" rel="external">http://nodejs.org/</a></li>
+</ul>
+<h1 id="开始搭建"><a href="#开始搭建" class="headerlink" title="开始搭建"></a>开始搭建</h1><h2 id="Git安装"><a href="#Git安装" class="headerlink" title="Git安装"></a>Git安装</h2><p>双击安装，只需一路下一步就可以了。<br>安装好之后，打开 Git Bash，输入：<code>git --version</code>可以查看git软件版本信息。</p>
+<h2 id="Node-js安装"><a href="#Node-js安装" class="headerlink" title="Node.js安装"></a>Node.js安装</h2><p>双击安装，只需一路下一步就可以了。<br>安装好之后，打开 Git Bash，输入：<code>node -v</code>可以查看node.js软件版本信息。</p>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>Git 和 Node.js安装好之后我们就可以安装Hexo了。<br>只需在Git Bash下输入如下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g hexo-cli</div></pre></td></tr></table></figure>
+<p>执行如下命令，创建你的hexo项目。其中<code>&lt;folder&gt;</code>是你的hexo项目的名称。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo init &lt;folder&gt;</div><div class="line">$ cd &lt;folder&gt;</div><div class="line">$ npm install</div></pre></td></tr></table></figure>
+<p>初始化成功之后，你的hexo项目文件夹看起来是这个样子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── _config.yml</div><div class="line">├── package.json</div><div class="line">├── scaffolds</div><div class="line">├── source</div><div class="line">|   ├── _drafts</div><div class="line">|   └── _posts</div><div class="line">└── themes</div></pre></td></tr></table></figure>
+<ul>
+<li>现在我们启动 hexo 本地服务，命令：<code>hexo server</code></li>
+<li>用浏览器访问：<a href="http://localhost:4000/，看下默认的博客样子。" target="_blank" rel="external">http://localhost:4000/，看下默认的博客样子。</a></li>
+<li>如果要停止 hexo 服务：在 Git Bash 下按 Ctrl + C 即可。</li>
+</ul>
+<h2 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h2><p><strong>主题可以在这里找：</strong></p>
+<ul>
+<li>hexo-theme：<a href="https://hexo.io/themes/" target="_blank" rel="external">https://hexo.io/themes/</a></li>
+<li>hexo-github-theme-list：<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">https://github.com/hexojs/hexo/wiki/Themes</a></li>
+</ul>
+<p>我使用的是 yelee：<a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" rel="external">https://github.com/MOxFIVE/hexo-theme-yelee</a></p>
+<p>在hexo项目目录下，然后输入命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/MOxFIVE/hexo-theme-yelee.git themes/yelee</div></pre></td></tr></table></figure>
+<p>这样就在 <code>hexo项目目录\themes</code> 目录下生成了一个 yelle 文件夹，里面就是我们刚刚 clone 下来的主题内容。</p>
+<p>修改hexo项目目录下的项目配置文件：_config.yml，把对应的主题目录名修改为 <code>yelee</code>:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line">theme: yelee</div><div class="line">...</div></pre></td></tr></table></figure>
+<ul>
+<li>重新生成静态博客内容：<code>hexo generate</code></li>
+<li>重启 hexo 本地服务：<code>hexo server</code></li>
+<li>重新访问：<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a> 就可以看到新主题了，个人感觉比默认主题要美观很多。</li>
+</ul>
+<h2 id="博客部署到github前期准备"><a href="#博客部署到github前期准备" class="headerlink" title="博客部署到github前期准备"></a>博客部署到github前期准备</h2><ul>
+<li>首先创建一个Github账号，网址为<a href="https://github.com/，如已有账号请自行略过。" target="_blank" rel="external">https://github.com/，如已有账号请自行略过。</a></li>
+<li>创建一个特别的仓库，仓库名为：XXX.github.io，其中XXX为你的Github账号。</li>
+<li>在本地生成 SSH 秘钥，方便电脑上的 git 软件好提交内容到 Github 上</li>
+</ul>
+<blockquote>
+<ul>
+<li><p>在 Git Bash 中，输入：ssh-keygen -t rsa -C “邮箱地址”，然后回车，回车，再回车，一共 3 次回车。</p>
+<blockquote>
+<p>例如：ssh-keygen -t rsa -C “XXX@sina.com”：</p>
+</blockquote>
+</li>
+<li><p>生成 ssh 密钥<br>此时，生成密钥后，在你电脑目录：C:\Users\用户名XXX.ssh 下，会生成两个文件：</p>
+<blockquote>
+<ul>
+<li>私钥：id_rsa</li>
+<li>公钥：id_rsa.pub<br>如果生成的不是这样的文件，那删除掉这两个生成的，重新执行上面的命令，让它再一次生成。</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<ul>
+<li>现在用记事本打开 id_rsa.pub，复制文件中的所有内容。<br>访问：<a href="https://github.com/XXX/XXX.github.io/settings/keys" target="_blank" rel="external">https://github.com/XXX/XXX.github.io/settings/keys</a>, 添加新秘钥,<br>Title：随便取<br>Key：把刚刚复制的都粘贴进来(删除尾部多余的空行)</li>
+</ul>
+<h2 id="同步本地的博客内容到Github"><a href="#同步本地的博客内容到Github" class="headerlink" title="同步本地的博客内容到Github"></a>同步本地的博客内容到Github</h2><ul>
+<li>要把本地的静态博客同步到 Github，我们还需要先安装两个跟部署相关的 hexo 插件：<br>继续在 Git Bash 中输入：<br>cnpm install hexo -server –save<br>cnpm install hexo-deployer-git –save</li>
+<li>编辑全局 hexo 的配置文件：_config.yml<br>官网对此配置的介绍：<a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="external">https://hexo.io/zh-cn/docs/configuration.html</a><br>配置大致如下(XXX为你的Github账号)：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: https://github.com/XXX/XXX.github.io.git</div><div class="line">  branch: master</div><div class="line">...</div></pre></td></tr></table></figure>
+<ul>
+<li><p>编辑全局配置后我们需要重新部署：<br>继续在 Git Bash 中输入命令：<br>先清除掉已经生成的旧文件：<code>hexo clean</code><br>再生成一次静态文件：<code>hexo generate</code><br>在本地预览下：<code>hexo server</code><br>本地没问题之后，Ctrl + C 停掉本地预览，使用部署命令部署到 Github 上：<code>hexo deploy</code>，有弹出提示框时，输入：<code>yes</code>后等待部署完成</p>
+</li>
+<li><p>之后就可以访问服务器地址：<a href="https://XXX.github.io，查看成果了" target="_blank" rel="external">https://XXX.github.io，查看成果了</a></p>
+</li>
+</ul>
+<p><strong>通过上面几次流程我们也就可以总结：以后，每次发表新文章要部署都按这样的流程来：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo generate</div><div class="line">hexo deploy</div></pre></td></tr></table></figure></p>
+<p>也可以使用精简版的命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo clean == hexo clean</div><div class="line">hexo g == hexo generate</div><div class="line">hexo s == hexo server</div><div class="line">hexo d == hexo deploy</div></pre></td></tr></table></figure></p>
+<h2 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h2><ul>
+<li>申请一个域名，比如为：<code>www.abc.com</code></li>
+<li><p>创建一个文件名为 <code>CNAME</code> 的文件（文件没有扩展名），内容为你的域名 <code>www.abc.com</code>,放在 <code>hexo项目目录\source</code>目录下</p>
+</li>
+<li><p>在你申请的域名管理界面设置域名解析，记录类型为CNAME<br>主机记录：@<br>记录类型：CNAME<br>记录值：XXX.github.io.（<strong>最后面有个点。最后面有个点。最后面有个点。</strong>）</p>
+</li>
+<li><p>设置好之后，等域名解析好之后(可能要等个几分钟)，就可以直接通过你的域名访问了。</p>
+</li>
+</ul>
+<h2 id="创建文档"><a href="#创建文档" class="headerlink" title="创建文档"></a>创建文档</h2><ul>
+<li>你可以执行下列命令来创建一篇新文章。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new [layout] &lt;title&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>您可以在命令中指定文章的布局（layout），默认为 post，可以通过修改 _config.yml 中的 default_layout 参数来指定默认布局。<br>具体可参考：<a href="https://hexo.io/zh-cn/docs/writing.html" target="_blank" rel="external">https://hexo.io/zh-cn/docs/writing.html</a></p>
+<ul>
+<li>hexo新文章内容的开头需要这样定义：<br>categories：表示文章所属分类<br>tags：表示文章所属标签<br>具体可参考：<a href="https://hexo.io/zh-cn/docs/front-matter.html" target="_blank" rel="external">https://hexo.io/zh-cn/docs/front-matter.html</a></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: 文章标题</div><div class="line">date: 2016-09-06</div><div class="line">categories: [Hexo,Git]</div><div class="line">tags: [Hexo,Git,Github,Node.js]</div><div class="line">---</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Hexo/">Hexo</a><a class="article-category-link" href="/categories/Hexo/Git/">Git</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Github/">Github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node-js/">Node.js</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-npm的http代理设置" class="article article-type-post" itemscope itemprop="blogPost">
   
