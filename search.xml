@@ -5,7 +5,7 @@
     
     <entry>
       <title><![CDATA[Hexo+Github搭建博客]]></title>
-      <url>http://nextation.changeip.net/2016/09/06/Hexo-Github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
+      <url>http:///2016/09/06/Hexo-Github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
       <content type="html"><![CDATA[<h2 id="本文环境"><a href="#本文环境" class="headerlink" title="本文环境"></a>本文环境</h2><ul>
 <li>系统： Win10 X64</li>
 <li>git: 2.10.0</li>
@@ -108,7 +108,7 @@
     
     <entry>
       <title><![CDATA[npm的http代理设置]]></title>
-      <url>http://nextation.changeip.net/2016/09/05/npm%E7%9A%84http%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/</url>
+      <url>http:///2016/09/05/npm%E7%9A%84http%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/</url>
       <content type="html"><![CDATA[<h2 id="npm设置http代理"><a href="#npm设置http代理" class="headerlink" title="npm设置http代理"></a>npm设置http代理</h2><p>node.js 的npm命令是node.js的包[管理工具]，安装外部模块时只需<br><code>npm install packagname</code> 即可，但是对于通过 <strong>代理</strong> 上网的用户直接运行是不能安装的。</p>
 <p>对于此种情况需要设置npm的<strong>上网代理</strong>环境变量，运行的命令如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm config set proxy=http://192.168.1.1:8080</div></pre></td></tr></table></figure>
@@ -118,7 +118,7 @@
     
     <entry>
       <title><![CDATA[Hexo简介]]></title>
-      <url>http://nextation.changeip.net/2016/09/05/hello-world/</url>
+      <url>http:///2016/09/05/hello-world/</url>
       <content type="html"><![CDATA[<p><a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>是一个开源的静态博客生成器,用node.js开发,作者是台湾大学生tommy351。</p>
 <h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="创建一条新博客"><a href="#创建一条新博客" class="headerlink" title="创建一条新博客"></a>创建一条新博客</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
 <p>更多信息请参考: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
